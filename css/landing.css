@@ -1,0 +1,116 @@
+/* General body */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+/* Container */
+.landing-container {
+  background: #fff;
+  padding: 40px 30px;
+  max-width: 650px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Header */
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.8rem;
+  color: #ff6f61;
+  margin-bottom: 5px;
+  animation: bounceIn 1s ease;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Terms */
+.terms {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Scrollbar */
+.terms::-webkit-scrollbar {
+  width: 6px;
+}
+.terms::-webkit-scrollbar-thumb {
+  background-color: #ff6f61;
+  border-radius: 3px;
+}
+
+/* Form */
+form input {
+  display: block;
+  width: 80%;
+  padding: 12px;
+  margin: 12px auto;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 10px rgba(255,111,97,0.3);
+}
+
+form button {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:disabled {
+  background: #f5a192;
+  cursor: not-allowed;
+}
+
+form button:hover:not(:disabled) {
+  background: #e65b4d;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

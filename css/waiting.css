@@ -1,0 +1,43 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  margin: 0;
+}
+
+.waiting-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.waiting-container h1 {
+  color: #ff6f61;
+  margin-bottom: 15px;
+  animation: bounceIn 1s ease;
+}
+
+#playerStatus {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #555;
+  animation: pulse 2s infinite;
+}
+
+#instructions {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Pulse animation for dynamic feel */
+@keyframes pulse {
+  0% { transform: scale(1); color: #555; }
+  50% { transform: scale(1.05); color: #ff6f61; }
+  100% { transform: scale(1); color: #555; }
+}

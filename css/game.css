@@ -1,0 +1,107 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff6f61;
+  animation: fadeIn 1s ease;
+}
+
+#called {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+#players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-board {
+  background: #fff;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.player-board:hover {
+  transform: scale(1.05);
+}
+
+.player-board h2 {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cell.marked {
+  background-color: #4caf50;
+  color: #fff;
+  animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+#winner {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #e91e63;
+  animation: flash 1s infinite;
+}
+
+.controls button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6f61;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #e65b4d;
+}
+
+@keyframes flash {
+  0%,100%{color:#e91e63;}
+  50%{color:gold;}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
