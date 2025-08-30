@@ -24,7 +24,35 @@
 
     <div id="status"></div>
   </div>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, onSnapshot, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyAVps5OMDB9c74A1_BBQXUuPVwjw_KK3bc",
+    authDomain: "bingo-game-851bd.firebaseapp.com",
+    projectId: "bingo-game-851bd",
+    storageBucket: "bingo-game-851bd",
+    messagingSenderId: "91004705338",
+    appId: "G-ZJVK8Z3FT4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Make Firebase functions globally accessible
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
+  window.getDocs = getDocs;
+  window.onSnapshot = onSnapshot;
+  window.doc = doc;
+  window.updateDoc = updateDoc;
+</script>
   <script src="js/app.js"></script>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="test-firebase.js"></script>
 </body>
 </html>
